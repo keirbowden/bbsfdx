@@ -1,0 +1,10 @@
+{
+  "commandDescription": "Disable or enable parallel test execution",
+  "enableFlagDescription": "Enable parallel test execution",
+  "disableFlagDescription": "Disable parallel test execution",
+  "keepFlagDescription": "Keep generated deployment files (automatically applied on error)",
+  "deployFailed" : "error: Operation failed - please check deploy status in the org. ",
+  "deploySucceded": " parallel test execution succeeded",
+  "sleeping": " sleeping for 5 seconds",
+  "filesLocation": "Deploy files are in "
+}
