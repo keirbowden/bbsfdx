@@ -22,7 +22,7 @@ $ npm install -g bbsfdx
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-bbsfdx/1.1.0 darwin-x64 node-v8.11.3
+bbsfdx/1.1.1 darwin-x64 node-v8.11.3
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -54,11 +54,21 @@ OPTIONS
   --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
                                                                                     this command invocation
 
-EXAMPLE
+EXAMPLES
   $ sfdx bb:maxapi --targetusername myOrg@example.com
+  Max API version for org: 48.0  
+
+  $ sfdx bb:maxapi --targetusername myOrg@example.com --json
+     {
+       "status": 0,
+       "result": {
+         "success": true,
+         "maxApiVersion": "48.0"
+       }
+     }
 ```
 
-_See code: [lib/commands/bb/maxapi.js](https://github.com/keirbowden/bbsfdx/blob/v1.1.0/lib/commands/bb/maxapi.js)_
+_See code: [lib/commands/bb/maxapi.js](https://github.com/keirbowden/bbsfdx/blob/v1.1.1/lib/commands/bb/maxapi.js)_
 
 ## `sfdx bb:test:parallel [-d] [-e] [-k] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -102,5 +112,5 @@ EXAMPLES
      }
 ```
 
-_See code: [lib/commands/bb/test/parallel.js](https://github.com/keirbowden/bbsfdx/blob/v1.1.0/lib/commands/bb/test/parallel.js)_
+_See code: [lib/commands/bb/test/parallel.js](https://github.com/keirbowden/bbsfdx/blob/v1.1.1/lib/commands/bb/test/parallel.js)_
 <!-- commandsstop -->
