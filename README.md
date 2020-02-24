@@ -22,7 +22,7 @@ $ npm install -g bbsfdx
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-bbsfdx/1.0.1 darwin-x64 node-v8.11.3
+bbsfdx/1.1.0 darwin-x64 node-v8.11.3
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -30,7 +30,35 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
+* [`sfdx bb:maxapi [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-bbmaxapi--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx bb:test:parallel [-d] [-e] [-k] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-bbtestparallel--d--e--k--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+
+## `sfdx bb:maxapi [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+Retrive the max api version of the org
+
+```
+USAGE
+  $ sfdx bb:maxapi [-u <string>] [--apiversion <string>] [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -u, --targetusername=targetusername                                               username or alias for the target
+                                                                                    org; overrides default target org
+
+  --apiversion=apiversion                                                           override the api version used for
+                                                                                    api requests made by this command
+
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+EXAMPLE
+  $ sfdx bb:maxapi --targetusername myOrg@example.com
+```
+
+_See code: [lib/commands/bb/maxapi.js](https://github.com/keirbowden/bbsfdx/blob/v1.1.0/lib/commands/bb/maxapi.js)_
 
 ## `sfdx bb:test:parallel [-d] [-e] [-k] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -60,11 +88,11 @@ OPTIONS
                                                                                     this command invocation
 
 EXAMPLES
-  $ sfdx bm:test:parallel -d --targetusername myOrg@example.com
+  $ sfdx bb:test:parallel -d --targetusername myOrg@example.com
       Not done yet - sleeping
       Disable parallel test execution succeeded
   
-  $ sfdx bm:test:parallel -e --targetusername myOrg@example.com --json
+  $ sfdx bb:test:parallel -e --targetusername myOrg@example.com --json
      {
        "status": 0,
        "result": {
@@ -74,5 +102,5 @@ EXAMPLES
      }
 ```
 
-_See code: [lib/commands/bb/test/parallel.js](https://github.com/keirbowden/bbsfdx/blob/v1.0.1/lib/commands/bb/test/parallel.js)_
+_See code: [lib/commands/bb/test/parallel.js](https://github.com/keirbowden/bbsfdx/blob/v1.1.0/lib/commands/bb/test/parallel.js)_
 <!-- commandsstop -->

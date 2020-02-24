@@ -23,11 +23,11 @@ export default class Parallel extends SfdxCommand {
   public static description = messages.getMessage('commandDescription');
 
   public static examples = [
-  `$ sfdx bm:test:parallel -d --targetusername myOrg@example.com
+  `$ sfdx bb:test:parallel -d --targetusername myOrg@example.com
    Not done yet - sleeping
    Disable parallel test execution succeeded
   `,
-  `$ sfdx bm:test:parallel -e --targetusername myOrg@example.com --json
+  `$ sfdx bb:test:parallel -e --targetusername myOrg@example.com --json
   {
     "status": 0,
     "result": {
