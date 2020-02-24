@@ -15,8 +15,19 @@ export default class Parallel extends SfdxCommand {
 
   public static examples = [
   `$ sfdx bb:maxapi --targetusername myOrg@example.com
+Max API version for org: 48.0  
+`
+    ,
+  `$ sfdx bb:maxapi --targetusername myOrg@example.com --json
+  {
+    "status": 0,
+    "result": {
+      "success": true,
+      "maxApiVersion": "48.0"
+    }
+  }
   `
-  ];
+      ];
 
   public static args = [{name: 'file'}];
 
