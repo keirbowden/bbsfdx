@@ -1,0 +1,8 @@
+{
+  "commandDescription": "Delete debug logs for the current user or all users",
+  "userIdLogMessage": "Deleting debug logs for user id",
+  "allLogMessage": "Deleting all debug logs",
+  "allFlagDescription": "delete debug logs for all users",
+  "successMessage": "Successfully deleted {0} debug log(s)",
+  "errorMessage": "Error - could only delete {0} of {1} debug log(s)"
+}

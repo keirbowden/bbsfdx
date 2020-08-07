@@ -1,0 +1,6 @@
+{
+  "commandDescription": "Delete developer console workspaces for the current user",
+  "userIdLogMessage": "Deleting workspace records for user id",
+  "successMessage": "Successfully deleted {0} workspace records",
+  "errorMessage": "Error - could only delete {0} of {1} workspace records"
+}
