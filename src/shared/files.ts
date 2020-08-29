@@ -6,19 +6,19 @@ import { mkdirSync } from 'fs';
  * same second.
  */
 export function getTmpDir() {
-    let rnd=Math.floor(Math.random() * Math.floor(50));
-	let dt=new Date();
-	let mm=(dt.getMonth() + 101).toString().substring(1, 3);
-	let dd=(dt.getDate() + 100).toString().substring(1, 3);
-	let HH=(dt.getHours() + 100).toString().substring(1, 3);
-	let MM=(dt.getMinutes() + 100).toString().substring(1, 3);
-	let SS=(dt.getSeconds() + 100).toString().substring(1, 3);
+    const rnd = Math.floor(Math.random() * Math.floor(50));
+    const dt = new Date();
+    const mm = (dt.getMonth() + 101).toString().substring(1, 3);
+    const dd = (dt.getDate() + 100).toString().substring(1, 3);
+    const HH = (dt.getHours() + 100).toString().substring(1, 3);
+    const MM = (dt.getMinutes() + 100).toString().substring(1, 3);
+    const SS = (dt.getSeconds() + 100).toString().substring(1, 3);
 
-	let ts=dt.getFullYear() + mm + dd + HH + MM + SS;
-	let dirname='/tmp/bbsfdx_' + ts + rnd;
+    const ts = dt.getFullYear() + mm + dd + HH + MM + SS;
+    const dirname = '/tmp/bbsfdx_' + ts + rnd;
 
     mkdirSync(dirname);
 
-	return dirname;
+    return dirname;
 }
 

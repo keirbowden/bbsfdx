@@ -1,0 +1,7 @@
+{
+    "addCommandDescription": "Add to existing IP ranges",
+    "sleeping": " sleeping for 5 seconds",
+    "rangeFlagDescription": "the IP range(s) to add",
+    "result": "Add IP range {0}"
+  }
+  

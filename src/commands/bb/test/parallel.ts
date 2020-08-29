@@ -1,15 +1,13 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
-import { getTmpDir } from '../../../shared/files';
-import { writeFileSync } from 'fs';
-import { join } from 'path';
-import { mkdirSync } from 'fs';
+import { createReadStream, mkdirSync, writeFileSync } from 'fs';
 import { removeSync } from 'fs-extra';
-import { createReadStream } from 'fs';
-import compressing=require('compressing');
 import { DeployResult } from 'jsforce';
+import { join } from 'path';
+import { getTmpDir } from '../../../shared/files';
 
+import compressing = require('compressing');
 
 // Initialize Messages with the current plugin directory
 Messages.importMessagesDirectory(__dirname);
@@ -144,6 +142,6 @@ export default class Parallel extends SfdxCommand {
     }
 
     this.ux.log(message);
-    return {success: deployResult.success, message: message};
+    return {success: deployResult.success, message};
   }
 }
