@@ -22,7 +22,7 @@ $ npm install -g bbsfdx
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-bbsfdx/1.3.0 darwin-x64 node-v8.11.3
+bbsfdx/1.4.1 darwin-x64 node-v8.11.3
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -31,6 +31,7 @@ USAGE
 <!-- usagestop -->
 <!-- commands -->
 * [`sfdx bb:devconsole:delete [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-bbdevconsoledelete--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+* [`sfdx bb:iprange:add [-r <array>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-bbiprangeadd--r-array--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx bb:logs:delete [-a] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-bblogsdelete--a--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx bb:maxapi [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-bbmaxapi--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx bb:test:parallel [-d] [-e] [-k] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-bbtestparallel--d--e--k--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
@@ -63,7 +64,38 @@ EXAMPLE
      Successfully deleted 1 workspace records
 ```
 
-_See code: [lib/commands/bb/devconsole/delete.js](https://github.com/keirbowden/bbsfdx/blob/v1.3.0/lib/commands/bb/devconsole/delete.js)_
+_See code: [lib/commands/bb/devconsole/delete.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/devconsole/delete.js)_
+
+## `sfdx bb:iprange:add [-r <array>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+Add to existing IP ranges
+
+```
+USAGE
+  $ sfdx bb:iprange:add [-r <array>] [-u <string>] [--apiversion <string>] [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -r, --range=range                                                                 the IP range(s) to add
+
+  -u, --targetusername=targetusername                                               username or alias for the target
+                                                                                    org; overrides default target org
+
+  --apiversion=apiversion                                                           override the api version used for
+                                                                                    api requests made by this command
+
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+EXAMPLE
+  $ sfdx bb:iprange:add --targetusername myOrg@example.com --range 192.168.1.1:192.168.1.255,192.168.1.4
+      Not done yet - sleeping
+      Add IP range succeeded
+```
+
+_See code: [lib/commands/bb/iprange/add.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/iprange/add.js)_
 
 ## `sfdx bb:logs:delete [-a] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -100,7 +132,7 @@ EXAMPLES
   Successfully deleted 3 debug logs
 ```
 
-_See code: [lib/commands/bb/logs/delete.js](https://github.com/keirbowden/bbsfdx/blob/v1.3.0/lib/commands/bb/logs/delete.js)_
+_See code: [lib/commands/bb/logs/delete.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/logs/delete.js)_
 
 ## `sfdx bb:maxapi [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -137,7 +169,7 @@ EXAMPLES
      }
 ```
 
-_See code: [lib/commands/bb/maxapi.js](https://github.com/keirbowden/bbsfdx/blob/v1.3.0/lib/commands/bb/maxapi.js)_
+_See code: [lib/commands/bb/maxapi.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/maxapi.js)_
 
 ## `sfdx bb:test:parallel [-d] [-e] [-k] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -181,5 +213,5 @@ EXAMPLES
      }
 ```
 
-_See code: [lib/commands/bb/test/parallel.js](https://github.com/keirbowden/bbsfdx/blob/v1.3.0/lib/commands/bb/test/parallel.js)_
+_See code: [lib/commands/bb/test/parallel.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/test/parallel.js)_
 <!-- commandsstop -->

@@ -50,7 +50,7 @@ export default class Add extends SfdxCommand {
   protected static requiresProject = false;
 
   public async run(): Promise<AnyJson> {
-    this.ux.log('Range = ' + JSON.stringify(this.flags.range, null, 4));
+    //this.ux.log('Range = ' + JSON.stringify(this.flags.range, null, 4));
     const conn = this.org.getConnection();
 
     const retrieveMDTypes = [{
