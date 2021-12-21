@@ -1,4 +1,5 @@
 import { mkdirSync } from 'fs';
+import { join } from 'path';
 
 /*
  * Generate a temporary directory name - current time plus a random
@@ -15,10 +16,9 @@ export function getTmpDir() {
     const SS = (dt.getSeconds() + 100).toString().substring(1, 3);
 
     const ts = dt.getFullYear() + mm + dd + HH + MM + SS;
-    const dirname = '/tmp/bbsfdx_' + ts + rnd;
+    const dirname = join('.', 'bbsfdx_' + ts + rnd);
 
     mkdirSync(dirname);
 
     return dirname;
 }
-

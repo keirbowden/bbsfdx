@@ -27,7 +27,7 @@ export async function deployMetadata(conn, zipFile, ux, messages): Promise<Deplo
 export async function retrieveMetadata(conn, types, ux, messages): Promise<RetrieveResult> {
     const asyncRetrieve = promisify(conn.metadata.retrieve);
     const retrieveCheck = await asyncRetrieve.call(conn.metadata, {
-      apiVersion: '49.0',
+      apiVersion: '53.0',
       singlePackage: true,
       unpackaged: {
         types

@@ -22,7 +22,7 @@ $ npm install -g bbsfdx
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-bbsfdx/1.4.1 darwin-x64 node-v8.11.3
+bbsfdx/1.4.2 darwin-x64 node-v12.18.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -64,7 +64,7 @@ EXAMPLE
      Successfully deleted 1 workspace records
 ```
 
-_See code: [lib/commands/bb/devconsole/delete.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/devconsole/delete.js)_
+_See code: [lib/commands/bb/devconsole/delete.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.2/lib/commands/bb/devconsole/delete.js)_
 
 ## `sfdx bb:iprange:add [-r <array>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -95,7 +95,7 @@ EXAMPLE
       Add IP range succeeded
 ```
 
-_See code: [lib/commands/bb/iprange/add.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/iprange/add.js)_
+_See code: [lib/commands/bb/iprange/add.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.2/lib/commands/bb/iprange/add.js)_
 
 ## `sfdx bb:logs:delete [-a] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -132,7 +132,7 @@ EXAMPLES
   Successfully deleted 3 debug logs
 ```
 
-_See code: [lib/commands/bb/logs/delete.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/logs/delete.js)_
+_See code: [lib/commands/bb/logs/delete.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.2/lib/commands/bb/logs/delete.js)_
 
 ## `sfdx bb:maxapi [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -169,7 +169,7 @@ EXAMPLES
      }
 ```
 
-_See code: [lib/commands/bb/maxapi.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/maxapi.js)_
+_See code: [lib/commands/bb/maxapi.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.2/lib/commands/bb/maxapi.js)_
 
 ## `sfdx bb:test:parallel [-d] [-e] [-k] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -213,5 +213,5 @@ EXAMPLES
      }
 ```
 
-_See code: [lib/commands/bb/test/parallel.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.1/lib/commands/bb/test/parallel.js)_
+_See code: [lib/commands/bb/test/parallel.js](https://github.com/keirbowden/bbsfdx/blob/v1.4.2/lib/commands/bb/test/parallel.js)_
 <!-- commandsstop -->

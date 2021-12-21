@@ -3,6 +3,7 @@ import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
 import { parse} from 'fast-xml-parser';
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { removeSync } from 'fs-extra';
 import { join } from 'path';
 import { Builder } from 'xml2js';
 import { getTmpDir } from '../../../shared/files';
@@ -100,7 +101,7 @@ export default class Add extends SfdxCommand {
     '   <name>Settings</name>\n' +
     '   <members>Security</members>\n' +
                        '  </types>\n' +
-                       '  <version>49.0</version>\n' +
+                       '  <version>53.0</version>\n' +
                        '</Package>';
 
     writeFileSync(packageFile, packageContents);
@@ -132,6 +133,8 @@ export default class Add extends SfdxCommand {
     const deployResult = await deployMetadata(conn, zipFile, this.ux, messages);
 
     this.ux.log(messages.getMessage('result').replace('{0}', deployResult.status));
+
+    await removeSync(tmpDir);
 
     return {success: deployResult.success};
   }
